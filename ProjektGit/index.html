@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obiekty</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="factory">
+      <div class="fa_title">
+        <div class="speed_game">
+          <div class="speed_day">2024-01-01 &nbsp;&nbsp; 00:00</div>
+          <button class="but_speedM" disabled></button>
+          <button class="but_start">START</button>
+          <button class="but_speedP" disabled></button>
+        </div>
+        <h3>Fabryka Samochodów OPEL S.A.</h3>
+        <div class="profit_day">
+          Dzienny zysk: &nbsp;&nbsp; 0 zł
+        </div>
+        <div class="cash">
+          Stan finansów: &nbsp;&nbsp; 3 000 000 zł
+        </div>
+      </div>
+
+      <div class="fa_content">
+        <!-- schowane okno informacyjne dla kosztu dziennego cost_info_hidden-->
+        <div class="cost_info ">
+          <p>
+            Witaj w symulacji fabryki samochodów.<br>Celem gry jest rozwinięcie fabryki i wygenerowanie największego zysku w skali jednego dnia. Aby to osiągnąć masz kilka dróg. Fabryka składa się z 3 działów: Zamówień, Produkcji i Sprzedaży. Każdy z działów możesz rozwijać co daje określone efekty.<br>Dział zamówień wraz z rozwojem udostępnia kolejne opcje wyboru produkowanych aut. Pozwala też na automatyczne generowanie coraz lepszych zamówień i wzrost ceny samochodów. Nie chcesz automatu w generowniu ? Możesz go wyłączyć przyciskiem 'auto on/off'.<br>Dział produkcji pozwala na dwudrogowy rozwój. Pierwszy dotyczy całej produkcji i wpływa na zakup coraz lepszych maszyn i lini produkcyjnych co znacząco zmniejsza koszty a tym samym zwieksza zyski. Druga linia ulepszeń odnosi się do każdego działu i wraz ze wzrostem poziomu wyszkolenia załogi skraca czas wykonania komponentów. Dodatkowo zwiększa miejsce na przyjęcie wiekszej ilości zamówień do produkcji.<br>Dział sprzedaży pozwala na wyszukiwanie najlepszych odbiorców wyprodukowanych aut. Wyższy poziom to szybsza automatyczna sprzedaż w lepszych cenach i zmniejszenie kosztów logistycznych.<br> Powodzenia.
+          </p>
+          <button class="close_window">
+            Zrozumiałem. Zamknij info.
+          </button>
+        </div>
+
+
+        <div class="order_department">
+
+          <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+          <div class="or_popup window_hidden">
+            <p></p>
+            <div class="but_container">
+              <button class="but_sell_Y window_hidden"></button>
+              <button class="but_sell_N window_hidden"></button>
+            </div>
+          </div>
+
+          <div class="title_order">
+            <div class="stars or_stars">
+              <div class="star or_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star or_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star or_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star or_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star or_star">
+                <i class="icon-star-empty"></i>
+              </div>
+            </div>
+            <div class="div_or_title">ZAMÓWIENIA</div>
+            <button class="update small_update update_disabled order_update "></button>
+          </div>
+
+          <div class="order_content">
+            <div class="model brand">
+              <div class="order_label">Model samochodu</div>
+              <button class="but_model">Corsa</button>
+              <button class="but_model">Astra</button>
+              <button class="but_model">Vectra</button>
+              <button class="but_model">Insygnia</button>
+            </div>
+
+            <div class="model body_car">
+              <div class="order_label">Rodzaj nadwozia</div>
+              <button class="but_model">Sedan</button>
+              <button class="but_model">Hatchback</button>
+              <button class="but_model">Combi</button>
+              <button class="but_model">Cabriolet</button>
+            </div>
+
+            <div class="model engine">
+              <div class="order_label">Typ silnika</div>
+              <button class="but_model">ON</button>
+              <button class="but_model">Pb</button>
+              <button class="but_model">Pb / LPG</button>
+              <button class="but_model">Electrict</button>
+            </div>
+          </div>  
+
+          <div class="order_content">
+            <div class="model">
+              <div class="order_label">Kolor lakieru</div>
+              <div class="palette">
+              <button class="but_model_color" style="background: white;" title="Biały"></button>
+              <button class="but_model_color" style="background: red;" title="Czerwony"></button>
+              <button class="but_model_color" style="background: green;" title="Zielony"></button>
+              <button class="but_model_color" style="background: black;" title="Czarny"></button>
+              <button class="but_model_color" style="background: blue;" title="Niebieski"></button>
+              <button class="but_model_color" style="background: gold;" title="Złoty"></button>
+              <button class="but_model_color" style="background: grey;" title="Szary"></button>
+              <button class="but_model_color" style="background: purple;" title="Purpurowy"></button>
+              <button class="but_model_color" style="background: silver;" title="Srebrny"></button>
+              <button class="but_model_color" style="background: lime;" title="Limonkowy"></button>
+              <button class="but_model_color" style="background: teal;" title="Morski"></button>
+              <button class="but_model_color" style="background: olive;" title="Oliwkowy"></button>
+              <button class="but_model_color" style="background: fuchsia;" title="Fuksja"></button>
+              <button class="but_model_color" style="background: navy;" title="Granatowy"></button>
+              <button class="but_model_color" style="background: maroon;" title="Kasztanowy"></button>
+              <button class="but_model_color" style="background: aqua;" title="Błękit"></button>
+            </div>
+            </div>
+
+            <div class="model gear">
+              <div class="order_label">Skrzynia biegów</div>
+              <button class="but_model">Manualna</button>
+              <button class="but_model">Półautomat</button>
+              <button class="but_model">Automat</button>
+              <button class="but_model">Bezstopniowa</button>
+            </div>
+
+            <div class="model number">
+              <div class="order_label">Zamawiana ilość</div>
+              <button class="but_model">1</button>
+              <button class="but_model">5</button>
+              <button class="but_model">10</button>
+              <button class="but_model">20</button>
+            </div>
+          </div>
+
+          <div class="opaque_or">
+            <button class="auto_start_stop auto_order"></button>
+            <div class="make_order">Złóż zamówienie</div>
+          </div>
+          
+          <div class="order_content order_content_line">
+            <div class="order_line_title">
+              <div class="order_des">Nr zam</div>
+              <div class="order_des">Model</div>
+              <div class="order_des">Nadwo</div>
+              <div class="order_des">Paliwo</div>
+              <div class="order_des">Skrzyn</div>
+              <div class="order_des order_des_big">Kolor</div>
+              <div class="order_des">Ilość</div>
+              <div class="order_des order_des_big">Koszt</div>
+            </div>
+
+            <div class="order_value  order_list_js">
+
+            </div>          
+          </div>
+        </div>
+
+        <!--  ********************** PRODUKCJA *************************** -->
+
+        <div class="production_department">
+           <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+           <div class="pr_popup window_hidden">
+            <p></p>
+            <div class="but_container">
+              <button class="but_sell_Y window_hidden"></button>
+              <button class="but_sell_N window_hidden"></button>
+            </div>
+          </div>
+
+          <div class="title_production">
+            <div class="stars pr_stars">
+              <div class="star pr_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star pr_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star pr_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star pr_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star pr_star">
+                <i class="icon-star-empty"></i>
+              </div>
+            </div>
+            <div class="div_pr_title">PRODUKCJA: [ model Corsa ]</div>
+            <button class="update small_update update_disabled prod_update "></button>
+          </div>
+
+          <div class="pr_all">
+            <div class="pr_line">  <!-- linia dla underbody i carbody -->
+              <div class="pr_division pr_underbody"> <!-- dział underbody-->
+                <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+                <div class="pr_popup big_popup window_hidden">
+                  <p></p>
+                  <div class="but_container">
+                    <button class="but_sell_Y window_hidden"></button>
+                    <button class="but_sell_N window_hidden"></button>
+                  </div>
+                </div>
+
+                <div class="opaque_up">
+                  <div class="stars  small_stars pr_stars">
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                  </div>
+
+                  <div class="pr_division_label pr_div_label">Podwozia</div>
+
+                  <button class="update small_update update_disabled prod_update"></button>
+                </div>
+                
+
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W kolejce</div>
+                  <div class="pr_div_inner_label pr_label_typeB">Postęp</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Na stanie</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Sedan">SE</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_SE_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_SE_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_SE">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Hatchback">HB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_HB_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_HB_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_HB">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Combi">CO</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_CO_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_CO_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CO">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Cabriolet">CB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_CB_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_CB_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CB">0</div>
+                </div>
+              </div>
+
+              <!--  ***********************************************************  -->
+
+              <div class="pr_division pr_carbody">  <!-- dział carbody-->
+                <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+                <div class="pr_popup big_popup  window_hidden">
+                  <p></p>
+                  <div class="but_container">
+                    <button class="but_sell_Y window_hidden"></button>
+                    <button class="but_sell_N window_hidden"></button>
+                  </div>
+                </div>
+
+                <div class="opaque_up">
+                  <div class="stars  small_stars pr_stars">
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                  </div>
+
+                  <div class="pr_division_label pr_div_label">Nadwozia</div>
+
+                  <button class="update small_update update_disabled prod_update "></button>
+                </div>
+
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W kolejce</div>
+                  <div class="pr_div_inner_label pr_label_typeB">Postęp</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Na stanie</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Sedan">SE</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_SE_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_SE_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                      <div class="pr_prog_pices pr_prog_barSE"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_SE">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Hatchback">HB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_HB_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_HB_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                      <div class="pr_prog_pices pr_prog_barHB"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_HB">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Combi">CO</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_CO_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_CO_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                      <div class="pr_prog_pices pr_prog_barCO"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CO">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Cabriolet">CB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_CB_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_CB_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                      <div class="pr_prog_pices pr_prog_barCB"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CB">0</div>
+                </div>
+              </div>
+            </div>
+
+            <!--  ***********************************************************  -->
+
+            <div class="pr_line">  <!-- linia dla engine i gear -->
+              <div class="pr_division pr_engine">  <!-- dział silniki-->
+                <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+                <div class="pr_popup big_popup  window_hidden">
+                  <p></p>
+                  <div class="but_container">
+                    <button class="but_sell_Y window_hidden"></button>
+                    <button class="but_sell_N window_hidden"></button>
+                  </div>
+                </div>
+
+                <div class="opaque_up">
+                  <div class="stars  small_stars pr_stars">
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                  </div>
+
+                  <div class="pr_division_label pr_div_label">Silniki</div>
+
+                  <button class="update small_update update_disabled prod_update "></button>
+                </div>
+
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W kolejce</div>
+                  <div class="pr_div_inner_label pr_label_typeB">Postęp</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Na stanie</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Diesel">ON</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_ON_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_ON_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                      <div class="pr_prog_pices pr_prog_barON"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_ON">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Benzyna">Pb</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_PB_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_PB_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                      <div class="pr_prog_pices pr_prog_barPB"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_PB">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Gaz LPG">LPG</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_LG_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_LG_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                      <div class="pr_prog_pices pr_prog_barLG"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_LG">0</div>
+                </div>
+                
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Elektryk">EC</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_EC_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_EC_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                      <div class="pr_prog_pices pr_prog_barEC"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_EC">0</div>
+                </div>
+              </div>
+
+              <!--  ***********************************************************-->
+
+              <div class="pr_division pr_gear">  <!-- dział skrzynie biegów-->
+                <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+                <div class="pr_popup big_popup  window_hidden">
+                  <p></p>
+                  <div class="but_container">
+                    <button class="but_sell_Y window_hidden"></button>
+                    <button class="but_sell_N window_hidden"></button>
+                  </div>
+                </div>
+
+                <div class="opaque_up">
+                  <div class="stars  small_stars pr_stars">
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                  </div>
+
+                  <div class="pr_division_label pr_div_label">Skrzynie biegów</div>
+
+                  <button class="update small_update update_disabled prod_update "></button>
+                </div>
+
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W kolejce</div>
+                  <div class="pr_div_inner_label pr_label_typeB">Postęp</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Na stanie</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Manualna">MA</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_MA_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_MA_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                      <div class="pr_prog_pices pr_prog_barMA"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_MA">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Półautomat">PA</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_PA_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_PA_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                      <div class="pr_prog_pices pr_prog_barPA"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_PA">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Automat">AU</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_AU_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_AU_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                      <div class="pr_prog_pices pr_prog_barAU"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_AU">0</div>
+                </div>
+                
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Bezstopniowa">BS</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_BS_order">0</div>
+
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_BS_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                      <div class="pr_prog_pices pr_prog_barBS"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_BS">0</div>
+                </div>
+              </div>
+            </div>
+
+            <!--  ***********************************************************  -->
+
+            <div class="pr_line">
+              <div class="pr_division pr_paintcar">  <!--  dział malarni  -->
+                <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+                <div class="pr_popup bigger_popup  window_hidden">
+                  <p></p>
+                  <div class="but_container">
+                    <button class="but_sell_Y window_hidden"></button>
+                    <button class="but_sell_N window_hidden"></button>
+                  </div>
+                </div>
+
+                <div class="opaque_up">
+                  <div class="stars  small_stars pr_stars">
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                  </div>
+
+                  <div class="pr_division_label pr_div_label">Malarnia</div>
+
+                  <button class="update small_update update_disabled prod_update "></button>
+                </div>
+
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W kolejce</div>
+                  <div class="pr_div_inner_label pr_label_typeB">Postęp</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Na stanie</div>
+                </div>
+                
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Sedan">SE</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_SEP_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_SEP_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                      <div class="pr_prog_pices pr_prog_barSEP"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_SEP">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Hatchback">HB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_HBP_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_HBP_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                      <div class="pr_prog_pices pr_prog_barHBP"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_HBP">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Combi">CO</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_COP_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_COP_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                      <div class="pr_prog_pices pr_prog_barCOP"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_COP">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Cabriolet">CB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_CBP_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_CBP_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                      <div class="pr_prog_pices pr_prog_barCBP"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CBP">0</div>
+                </div>
+              </div>
+
+              <!-- ************************************************************* -->
+
+              <div class="pr_division pr_assembly">  <!--  dział montowni  -->
+                <!-- schowane okno potwierdzenia rozbudowy fabryki -->
+                <div class="pr_popup bigger_popup  window_hidden">
+                  <p></p>
+                  <div class="but_container">
+                    <button class="but_sell_Y window_hidden"></button>
+                    <button class="but_sell_N window_hidden"></button>
+                  </div>
+                </div>
+
+                <div class="opaque_up">
+                  <div class="stars  small_stars pr_stars">
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                    <div class="star pr_star">
+                      <i class="icon-star-empty"></i>
+                    </div>
+                  </div>
+
+                  <div class="pr_division_label pr_div_label">Montaż</div>
+
+                  <button class="update small_update update_disabled prod_update "></button>
+                </div>
+
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W kolejce</div>
+                  <div class="pr_div_inner_label pr_label_typeB">Postęp</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Na stanie</div>
+                </div>
+                
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Sedan">SE</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_SEA_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_SEA_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                      <div class="pr_prog_pices pr_prog_barSEA"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_SEA">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Hatchback">HB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_HBA_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_HBA_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                      <div class="pr_prog_pices pr_prog_barHBA"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_HBA">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Combi">CO</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_COA_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_COA_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                      <div class="pr_prog_pices pr_prog_barCOA"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_COA">0</div>
+                </div>
+
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA" title="Cabriolet">CB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_CBA_order">0</div>
+                  <div class="pr_div_inner_label pr_label_typeB">
+                    <div class="pr_prog_text pr_CBA_progs">0.00 %</div>
+                    <div class="pr_prog_pices_opaque">
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                      <div class="pr_prog_pices pr_prog_barCBA"></div>
+                    </div>  
+                  </div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CBA">0</div>
+                </div>
+              </div>
+
+              <!-- *************** STATYSTYKI PRODUKCJI ******************* -->
+
+              <div class="pr_division pr_stats">
+                <div class="pr_division_label pr_div_label">Statystyki produkcji</div>
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA pr_checkmodel">Corsa</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_checkmodel">Astra</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_checkmodel">Vectra</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_checkmodel">Insygnia</div>
+                </div>
+                <div class="pr_division_label pr_div_label">
+                  <div class="pr_div_inner_label pr_label_typeA">Typ</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Zam.</div>
+                  <div class="pr_div_inner_label pr_label_typeA">W toku</div>
+                  <div class="pr_div_inner_label pr_label_typeA">Gotowe</div>
+                </div>
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA">SE</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_order_SES">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_prog_SES">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_SES">0</div>
+                </div>
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA">HB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_order_HBS">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_prog_HBS">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_HBS">0</div>
+                </div>
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA">CO</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_order_COS">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_prog_COS">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_COS">0</div>
+                </div>
+                <div class="pr_division_label pr_bar_label">
+                  <div class="pr_div_inner_label pr_label_typeA">CB</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_order_CBS">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_prog_CBS">0</div>
+                  <div class="pr_div_inner_label pr_label_typeA pr_stock_CBS">0</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="warehouse_department">
+          <!-- schowane okno potwierdzenia rozbudowy magazynu -->
+          <div class="whouse_popup window_hidden">
+            <p></p>
+            <div class="but_container">
+              <button class="but_sell_Y window_hidden"></button>
+              <button class="but_sell_N window_hidden"></button>
+            </div>
+          </div>
+
+          <!-- schowane okno klasyfikacji -->
+          <div class="whstanding wh_standing_hidden">
+            <div class="wh_standing_titleA">Tabela wyników</div>
+            <div class="wh_standing_title">
+              <div class="wh_standing_elem elemA">Miejsce</div>
+              <div class="wh_standing_elem elemB">Data</div>
+              <div class="wh_standing_elem elemC">Zysk w zł</div>
+            </div>
+            <div class="wh_standing_title posA">
+              <div class="wh_standing_elem elemA">1.</div>
+              <div class="wh_standing_elem elemB elemA_js"></div>
+              <div class="wh_standing_elem elemC elemB_js"></div>
+            </div>
+            <div class="wh_standing_title posB">
+              <div class="wh_standing_elem elemA">2.</div>
+              <div class="wh_standing_elem elemB elemC_js"></div>
+              <div class="wh_standing_elem elemC elemD_js"></div>
+            </div>
+            <div class="wh_standing_title posC">
+              <div class="wh_standing_elem elemA">3.</div>
+              <div class="wh_standing_elem elemB elemE_js"></div>
+              <div class="wh_standing_elem elemC elemF_js "></div>
+            </div>
+            <div class="wh_standing_title posD">
+              <div class="wh_standing_elem elemA">4.</div>
+              <div class="wh_standing_elem elemB elemG_js"></div>
+              <div class="wh_standing_elem elemC elemH_js"></div>
+            </div>
+            <div class="wh_standing_title posE">
+              <div class="wh_standing_elem elemA">5.</div>
+              <div class="wh_standing_elem elemB elemI_js"></div>
+              <div class="wh_standing_elem elemC elemJ_js"></div>
+            </div>
+          </div>
+
+          <div class="title_warehouse">
+            <div class="stars wh_stars">
+              <div class="star wh_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star wh_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star wh_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star wh_star">
+                <i class="icon-star-empty"></i>
+              </div>
+              <div class="star wh_star">
+                <i class="icon-star-empty"></i>
+              </div>
+            </div>
+            <div class="div_wh_title">SPRZEDAŻ</div>
+            <button class="update small_update update_disabled wh_update "></button>
+          </div>
+
+          <div class="wh_all">
+            <div class="wh_label">CORSA</div>
+            <div class="wh_brand_all">
+              <div class="wh_brand_title">SE</div>
+              <div class="wh_brand_title">HB</div>
+              <div class="wh_brand_title">CO</div>
+              <div class="wh_brand_title">CB</div>
+            </div>
+            <div class="wh_brand_count_all">
+              <div class="wh_brand_count wh_CO_SE">0</div>
+              <div class="wh_brand_count wh_CO_HB">0</div>
+              <div class="wh_brand_count wh_CO_CO">0</div>
+              <div class="wh_brand_count wh_CO_CB">0</div>
+            </div>
+
+            <div class="wh_label">ASTRA</div>
+            <div class="wh_brand_all">
+              <div class="wh_brand_title">SE</div>
+              <div class="wh_brand_title">HB</div>
+              <div class="wh_brand_title">CO</div>
+              <div class="wh_brand_title">CB</div>
+            </div>
+            <div class="wh_brand_count_all">
+              <div class="wh_brand_count wh_AS_SE">0</div>
+              <div class="wh_brand_count wh_AS_HB">0</div>
+              <div class="wh_brand_count wh_AS_CO">0</div>
+              <div class="wh_brand_count wh_AS_CB">0</div>
+            </div>
+
+            <div class="wh_label">VECTRA</div>
+            <div class="wh_brand_all">
+              <div class="wh_brand_title">SE</div>
+              <div class="wh_brand_title">HB</div>
+              <div class="wh_brand_title">CO</div>
+              <div class="wh_brand_title">CB</div>
+            </div>
+            <div class="wh_brand_count_all">
+              <div class="wh_brand_count wh_VE_SE">0</div>
+              <div class="wh_brand_count wh_VE_HB">0</div>
+              <div class="wh_brand_count wh_VE_CO">0</div>
+              <div class="wh_brand_count wh_VE_CB">0</div>
+            </div>
+
+
+            <div class="wh_label">INSYGNIA</div>
+            <div class="wh_brand_all">
+              <div class="wh_brand_title">SE</div>
+              <div class="wh_brand_title">HB</div>
+              <div class="wh_brand_title">CO</div>
+              <div class="wh_brand_title">CB</div>
+            </div>
+            <div class="wh_brand_count_all">
+              <div class="wh_brand_count wh_IN_SE">0</div>
+              <div class="wh_brand_count wh_IN_HB">0</div>
+              <div class="wh_brand_count wh_IN_CO">0</div>
+              <div class="wh_brand_count wh_IN_CB">0</div>
+            </div>
+
+            <div class="wh_label">Zamówienia gotowe</div>
+            <div class="wh_order_content order_content_line ">
+              <div class="order_line_title">
+                <div class="order_des">Nr zam</div>
+                <div class="order_des">Model</div>
+                <div class="order_des">Ilość</div>
+                <div class="order_des order_des_big">Wartość</div>
+                <div class="order_des order_des_big">Zysk</div>
+              </div>
+              <div class="order_value end_order_list_js"></div>        
+            </div>
+            
+            <div class="wh_popup window_hidden">
+              <p>Potwierdzasz sprzedaż ?</p>
+              <div class="but_container">
+                <button class="but_sell_Y">TAK</button>
+                <button class="but_sell_N">NIE</button>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>    
+    <script src="js/logika copy.js"></script>
+  </body>
+</html>

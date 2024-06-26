@@ -1,0 +1,806 @@
+body {
+  color: rgb(117, 154, 192);
+  font-size: 2vh;
+  font-family: sans-serif;
+  background-color: rgb(21, 9, 9);
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 99vh;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+}
+
+.factory { /*div na cala fabryke*/
+  width: 99%;
+  height: 99%;
+  background-color: rgb(33, 26, 37);
+  border: 0.1vh solid cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5vh;
+  overflow: hidden;
+}
+
+.fa_title { /*logo fabryki*/
+  width: 95%;
+  border: 0.1vh solid aqua;
+  display: flex;
+  justify-content: center;
+  margin: 0.5vh 0;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.speed_game { /*  moduł szybkości gry */
+  width: 30%;
+  height: 90%;
+ /* border: 0.1vh solid aqua;*/
+  position: absolute;
+  left: 1vh;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.but_start, .auto_start_stop { /* start i stop gry */
+  width: 13%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  cursor: pointer;
+  background: green;
+  margin: 0 0.3vh;
+}
+
+.but_speedM, .but_speedP { /*zmiana szybkości czasu w grze*/
+  width: 22%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.speed_day { /* licznik daty i godziny w grze */
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  border: 0.1vh solid aqua;
+  border-radius: 25%;
+  margin: 0.5vh;
+  margin-top: 1vh;
+  margin-right: 3vh;
+  background-color: darkgreen;
+  color: whitesmoke;
+  padding: 0;
+}
+
+.cash, .profit_day {
+  width: 17%;
+  height: 80%;
+  border: 0.1vh solid aqua;
+  border-radius: 25%;
+  position: absolute;
+  right: 1vh;
+  top: 0;
+  margin: 0.5vh;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgreen;
+  color: whitesmoke;
+  font-size: 100%;
+}
+
+.profit_day {
+  right: 40vh;
+  width: 14%;
+}
+
+.cash:hover, .profit_day:hover {
+  cursor: pointer;
+  background-color: rgb(8, 56, 8);
+}
+
+.fa_content { /* div zamykajacy wszystkie działy fabryki*/
+  margin-bottom: 0.2vh;
+ /* border: 0.1vh solid aqua;*/
+  width: 98%;
+  flex: 14;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.order_department, .production_department, .warehouse_department { /* div na zamowienia, produkcje, magazyn fabryki*/
+  display: flex;
+  flex-direction: column;
+  border: 0.1vh solid rgb(47, 202, 109);
+  margin: 0.5vh;
+  align-items: center;
+  position: relative;
+}
+
+.order_department {
+  flex: 3;
+  overflow-y: hidden;
+}
+
+.production_department {
+  flex: 5;
+}
+
+.warehouse_department {
+  flex: 2;
+}
+
+.title_order, .title_production, .title_warehouse  { /* nazwy działów */
+  margin: 0.5vh;
+  border: 0.1vh solid rgb(171, 56, 179);
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+}
+
+.stars, .div_or_title, .div_pr_title, .div_wh_title, .update { /* info o dziale */
+  display: flex;
+  flex: 2;
+  /*border:0.1vh solid red;*/
+  justify-content: center;
+  margin: 0 1vh;
+  font-size: 90%;
+}
+
+.small_stars {
+  font-size: 70%;
+}
+
+.div_pr_title {
+  flex: 3;
+}
+
+.update {  /*przycisk ulepszania działu*/
+  background-color:cadetblue;
+  border: 0.1vh solid cyan;
+  border-radius: 2vh;
+}
+
+.update:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.update_disabled:disabled {
+  background-color: #ccc; /* Szary kolor tła */
+  color: #666; /* Ciemnoszary kolor tekstu */
+  cursor: not-allowed; /* Zmiana kursora na "nie dozwolony" */
+  opacity: 0.6; /* Zmniejszenie przezroczystości */
+}
+
+.small_update {
+  font-size: 70%;
+}
+
+.wh_update {
+  flex: 2;
+}
+
+.div_or_title, .div_pr_title, .div_wh_title { /* tekst - tytuł działu */
+  font-size: 110%;
+}
+
+.order_content { /* pojemniki na divy z opcjami wyboru */
+  margin-bottom: 0.5vh;
+  width: 98%;
+  display: flex;
+  height: 28%;
+  /*border: 0.2vh solid red;*/
+}
+
+.order_content_line {
+  flex-direction: column; 
+}
+
+.order_value {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.model, .make_order { /*divy na opcje wyboru, div zlozenia zamówienia */
+  margin: 0.5vh;
+  border: 0.1vh solid rgb(171, 56, 179);
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.model {
+  height: 95%;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.make_order { /* div zlożenia zamówienia */
+  height: auto;
+  width: 50%;
+  align-items: center;
+  background: rgb(140, 17, 42);
+  color: white;
+  opacity: 0.2;
+  pointer-events: none;
+  justify-content: center;
+}
+
+.make_order:hover {
+  cursor: pointer;
+}
+
+.make_order_set { /* klasa dla js */
+  background: rgb(24, 115, 12);
+  color: white;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.palette { /* div palety kolorów */
+  height: 60%;
+  flex-wrap: wrap;
+  margin: 0.3vh;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.order_label {  /* nagłówek kategori opcji wyboru */
+  margin-bottom: 0.4vh;
+  padding: 0.9vh;
+  text-align: center;
+  height: 15%;
+  display: flex; /* Ustawienie na flexbox */
+  align-items: center; /* Wyśrodkowanie tekstu w pionie */
+}
+
+.but_model { /* przyciski opcji wyboru */
+  width: 80%;
+  margin: 0.3vh;
+  background: black;
+  color: white;
+  font-size: 2vh;
+}
+
+.but_model:hover {
+  background: darkgreen;
+  cursor: pointer;
+}
+
+.but_set { /* klasa dla js */
+  background: darkgreen;
+  transform: scale(1.2);
+  border-radius: 50%;
+}
+
+.but_model_color { /* przyciski kolorów*/
+  width: 20%;
+  height: 20%;
+  margin: 2%;
+}
+
+.but_model_color:hover, .but_set_color {
+  transform: scale(2);
+  border-radius: 50%;
+}
+
+.order_line_title {  /* linia podsumowania zamówienia */
+  display: flex;
+  width: 100%;
+}
+
+.order_line {  /* linia podsumowania zamówienia */
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.order_line_title {
+  background-color: rgb(107, 107, 155);
+  color:rgb(238, 255, 0);
+  margin-bottom: 0.4vh;
+}
+
+.order_des {  /* element linii podsumowania zamówienia */
+  display: flex;
+  flex: 2;
+  border-bottom: 0.1vh solid rgb(53, 53, 184);
+  justify-content: center;
+  border-left: 0.1vh solid rgb(53, 53, 184);
+}
+
+.order_des_big {
+  flex:3;
+}
+
+.order_number {
+  justify-content: right;
+  padding-right: 0.1vh;
+}
+
+.order_des:last-child {
+  border-right: 0.1vh solid rgb(53, 53, 184);
+}
+
+.opaque_or {
+  display: flex;
+  width: 95%;
+  height: auto;
+  /*border: 0.2vh solid red;*/
+  margin-bottom: 0.3vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.auto_start_stop {
+  display: flex;
+  position: absolute;
+  left: 1vh;
+  width: 20%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  cursor: pointer;
+  background: green;
+  margin: 0 0.3vh;
+}
+
+.auto_off {
+  background-color: red;
+}
+/* ************ PRODUKCJA ************ */
+
+.pr_all {  /* ogólny div produkcji */
+  width: 99%;
+  height: 99%;
+  /*border: 0.1vh solid rgb(171, 56, 179);*/
+  display: flex;
+  flex-direction: column;
+}
+
+.pr_line { /* linie produkcyjne 2 w divie */
+  display: flex;
+  flex: 1;
+  /*border: 0.1rem solid rgb(4, 76, 131);*/
+  margin: 0.2vh;
+}
+
+.pr_division {  /* dział produkcji (podwozia, nadwozia, silniki, skrzynie)*/
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0.4vh;
+  border: 0.1rem solid rgb(4, 76, 131);
+  position: relative;
+}
+
+.opaque_up {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+.pr_division_label { /* pasek nazwy działu produkcji*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin: 0.4vh;*/
+  
+}
+
+.pr_div_label { /*wysokość pasków z etykietami*/
+  flex: 3;
+  /*border-bottom: 0.1rem solid rgb(4, 76, 131);*/
+}
+
+.pr_bar_label { /*wysokość pasków produkcji*/
+  flex: 4;
+  border-bottom: 0.1rem solid rgb(4, 76, 131);
+}
+
+.pr_div_inner_label { /* style etykiet na działach produkcji*/
+  display: flex;
+  border: 0.1rem solid rgb(4, 76, 131);
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.pr_label_typeA { /* style etykiet na działach produkcji*/
+  flex: 1;
+}
+
+.pr_label_typeB { /* style etykiet na działach produkcji*/
+  flex: 2; 
+}
+
+.pr_prog_text {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:rgb(247, 255, 2);
+  font-size: 80%;
+}
+
+.pr_prog_pices_opaque {
+  min-width: 90%;
+  min-height: 50%;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-start;
+  border: 0.1vh solid green;
+}
+
+.pr_prog_pices {
+  min-width: 4%;
+  min-height: 100%;
+  background: green;
+  display: none;
+}
+
+.pr_checkmodel { /*div wyboru modelu na produkcji*/
+  background: rgb(62, 32, 64);
+}
+
+.pr_checkmodel:hover {
+  cursor: pointer;
+  background: rgb(39, 110, 34);
+  color: black;
+}
+
+.pr_checkmodel_set {
+  background: rgb(13, 61, 10);
+}
+
+/*   ************* MAGAZYN *************  */
+
+.wh_all {
+  width: 95%;
+  height: 45%;
+  margin: 0.5vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.wh_brand_all, .wh_brand_count_all, .wh_label {
+  display: flex;
+  height: 8%;
+ /* border: 0.1vh solid green;*/
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.wh_label {
+  border: 0.1vh solid green;
+  background-color: rgb(45, 45, 156);
+}
+
+.wh_brand_count_all {
+  margin-bottom: 0.6vh;
+}
+
+.wh_brand_title, .wh_brand_count {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: 0.1vh solid green;
+  height: 100%;
+}
+
+.wh_order_content {
+  margin-bottom: 0.5vh;
+  width: 100%;
+  display: flex;
+  height: 110%;
+ /*border: 0.2vh solid red;*/
+  flex-direction: column;
+  position: relative;
+}
+
+.wh_order_line_style {
+  background-color: red;
+}
+
+.wh_popup {
+  display: flex;
+  flex-direction: column;
+  background-color:black;
+  color: lime;
+  width: 60%;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+  padding: 1vh;
+  border: 0.1vh solid lime;
+  border-radius: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.or_popup, .pr_popup, .whouse_popup {
+  top: 12vh;
+  display: flex;
+  flex-direction: column;
+  background-color:black;
+  color: lime;
+  width: 60%;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+  padding: 1vh;
+  border: 0.1vh solid lime;
+  border-radius: 30%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.pr_popup {
+  width: 40%;
+}
+
+.big_popup {
+  width: 80%;
+}
+
+.bigger_popup {
+  width: 60%;
+}
+
+.pr_popup p {
+  text-align: center;
+}
+
+.whouse_popup {
+  width: 90%;
+}
+
+.wh_popup p {
+  margin: 1vh;
+}
+
+.window_hidden {
+  display: none;
+}
+
+.but_container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+ /* border: 0.1vh solid yellow;*/
+}
+
+.but_sell_Y, .but_sell_N {
+  width: 50%;
+  margin: 0 0.5vh;
+  cursor: pointer;
+}
+
+.but_sell_Y {
+  background-color: darkgreen;
+  color: yellow;
+}
+
+.but_sell_N {
+  background-color: white;
+  color: darkred;
+}
+
+.cost_info {  /* duże okno informacyjne */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.5vh solid blue;
+  border-radius: 10vh;
+  background-color: aqua;
+  color: blue;
+  z-index: 10;
+  padding: 2vh 4vh;
+  font-size: 120%;
+  justify-content:center;
+  align-items: center;
+  text-align: justify;
+}
+
+.cost_info_hidden {
+  display: none;
+}
+
+.close_window { /*przycisk zamknięcia okna informacyjnego*/
+  width: 30%;
+  display: flex;
+  background-color: darkolivegreen;
+  color: bisque;
+  align-items: center;
+  justify-content: center;
+  outline: 0.4vh solid darkgreen;
+  border-radius: 5vh;
+  line-height: 120%;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.close_window:hover {
+  opacity: 1;
+}
+
+.grey_button {
+  background-color: gray;
+}
+
+/* okno wyników */
+
+.whstanding {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  height: 40%;
+  border: 0.4vh solid gold;
+  z-index: 20;
+  background-color: black;
+  color: gold;
+  align-items: center;
+}
+
+.wh_standing_titleA {
+  font-size: 120%;
+  padding: .8vh 0;
+}
+
+.wh_standing_title {
+  display: flex;
+  border-top: 0.4vh dotted goldenrod;
+  font-size: 100%;
+  padding: .8vh 0;
+  width: 95%;
+  align-content: center;
+}
+
+.wh_standing_title:last-child {
+  border-bottom: 0.4vh dotted goldenrod;
+}
+
+.wh_standing_elem {
+  display: flex;
+  justify-content: center;
+}
+
+.wh_standing_elem:last-child {
+  justify-content: right;
+  padding-right: 2vh;
+}
+
+.elemA {
+  flex: 1;
+}
+
+.elemC, .elemB {
+  flex: 2;
+}
+
+.wh_standing_hidden {
+  display: none;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/font/fontello.eot?52448319');
+  src: url('../fonts/font/fontello.eot?52448319#iefix') format('embedded-opentype'),
+       url('../fonts/font/fontello.woff2?52448319') format('woff2'),
+       url('../fonts/font/fontello.woff?52448319') format('woff'),
+       url('../fonts/font/fontello.ttf?52448319') format('truetype'),
+       url('../fonts/font/fontello.svg?52448319#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?52448319#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-star:before { 
+  content: '\e804'; 
+  font-size: 120%;
+  color: gold;
+} /* '' */
+
+.icon-star-empty:before { 
+  content: '\e805'; 
+  color: gold;
+  font-size: 120%;
+} /* '' */
+
+.icon-star-half-alt:before { 
+  content: '\f123';
+  font-size: 120%;
+  color: gold;
+ } /* '' */

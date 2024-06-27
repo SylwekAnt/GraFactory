@@ -155,7 +155,7 @@
         let NoVIN = ''; //nr seryjny samochodu
         let yearProdCar = startDate.getFullYear();  //pobranie roku produkcji
         let monthProdCar = startDate.getMonth() + 1; //pobranie m-ca produkcji
-        let profit = 0; //zyska na aucie
+        let profit = 0; //zysk na aucie
 
         let price = costCar * (tabOrderLvl[updateOrderLvl].ratio + ratioColor);  // ustalenie wyjściowej ceny za auto
 
